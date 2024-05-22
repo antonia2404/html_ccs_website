@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Cariere</title>
+  </head>
+  <body>
+    <!-- Start header section-->
+    <header>
+      <div class="container header">
+        <div class="logo">
+          <a href="#hero"
+            ><img src="./imagini/logo.png" class="logo-img" alt="logo-Delicio"
+          /></a>
+        </div>
+        <button id="navToggleBtn" class="btn-toggle">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav class="navigation">
+          <ul class="nav-items">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Patiserie</a>
+            </li>
+            <li class="nav-item">
+              <a href="produse.html" class="nav-link">Produse</a>
+            </li>
+            <li class="nav-item">
+              <a href="servicii.html" class="nav-link">Servicii</a>
+            </li>
+            <li class="nav-item">
+              <a href="echipa.html" class="nav-link">Echipă</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link active">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- End header section-->
+
+    <!-- Start main section-->
+    <main>
+      <!-- Start contact section -->
+      <section id="contact" class="contact-hero">
+        <div class="hero-overlay">
+          <div class="container">
+            <div class="hero-content">
+              <h1>Contact</h1>
+              <div class="contact-details">
+                <!-- Left side with location, phone, and email -->
+                <div class="contact-info">
+                  <div class="contact-item">
+                    <i class="fa-solid fa-map-marker"></i>
+                    <p>
+                      Str. Nufărului 48, Oradea<br />410584, Oradea, România
+                    </p>
+                  </div>
+                  <div class="contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>+40 0755 743 451</p>
+                  </div>
+                  <div class="contact-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>office@delicio.ro</p>
+                  </div>
+                </div>
+                <!-- Right side with map -->
+                <div class="contact-map">
+                  <!-- Embed your map here or use an API like Google Maps -->
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.141243365895!2d21.91849601465435!3d47.07244382276495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4745cf4d282cdba5%3A0xf6a6630b1471186!2sStrada%20Nuf%C4%83rului%2048%2C%20Oradea%20410584!5e0!3m2!1sen!2sro!4v1642418400049!5m2!1sen!2sro"
+                    width="600"
+                    height="450"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End contact section -->
+
+      <!-- Orange line separator -->
+      <div class="orange-line"></div>
+
+      <!-- Start form section -->
+      <section id="contact-form" class="container">
+        <div class="section-title">
+          <h5>
+            Pentru orice întrebări ne puteți contacta și prin formularul de mai
+            jos
+          </h5>
+        </div>
+        <form id="application-form">
+          <label for="name">Nume:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="phone">Telefon:</label>
+          <input type="tel" id="phone" name="phone" required />
+
+          <label for="message">Mesaj:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+
+          <button
+            type="submit"
+            class="btn-primary"
+            onclick="validateAndSubmit()"
+          >
+            Trimite
+          </button>
+        </form>
+      </section>
+      <!-- End form section -->
+    </main>
+    <!-- End main section-->
+
+    <!-- Start footer section-->
+    <footer>
+      <div class="container">
+        <div class="footer-left">
+          <p><strong>URMĂREȘTE-NE PE:</strong></p>
+          <ul class="social-items">
+            <li class="social-item">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                class="social-link"
+              >
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+            </li>
+            <li class="social-item">
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                class="social-link"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="copyright">
+          &copy; Delicio 2024. Toate drepturile rezervate
+        </div>
+      </div>
+    </footer>
+
+    <!-- End footer section-->
+    <script
+      src="https://kit.fontawesome.com/3a6ea3d652.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+    <script>
+      function validateAndSubmit() {
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        if (name === "" || email === "" || phone === "" || message === "") {
+          alert("Toate câmpurile trebuie completate.");
+        } else {
+          const emailPattern =
+            /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+          if (!emailPattern.test(email)) {
+            alert("Adresa de email nu este validă.");
+          } else {
+            const emailLink = `mailto:lucaciuantonia24@gmail.com?subject=Contact%20Form&body=Name:%20${name}%0D%0AEmail:%20${email}%0D%0APhone:%20${phone}%0D%0AMessage:%20${message}`;
+            window.location.href = emailLink;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

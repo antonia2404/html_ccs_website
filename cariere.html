@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Cariere</title>
+  </head>
+  <body>
+    <!-- Start header section-->
+    <header>
+      <div class="container header">
+        <div class="logo">
+          <a href="#hero"
+            ><img src="./imagini/logo.png" class="logo-img" alt="logo-Delicio"
+          /></a>
+        </div>
+        <button id="navToggleBtn" class="btn-toggle">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav class="navigation">
+          <ul class="nav-items">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Patiserie</a>
+            </li>
+            <li class="nav-item">
+              <a href="produse.html" class="nav-link">Produse</a>
+            </li>
+            <li class="nav-item">
+              <a href="servicii.html" class="nav-link">Servicii</a>
+            </li>
+            <li class="nav-item">
+              <a href="echipa.html" class="nav-link active">Echipă</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- End header section-->
+
+    <!-- Start main section-->
+    <main>
+      <!-- Start hero section -->
+      <section id="hero" class="hero cariere-hero">
+        <div class="hero-overlay">
+          <div class="container">
+            <div class="hero-content">
+              <h1>Cariere</h1>
+              <p>
+                Suntem mereu în căutare de persoane talentate, harnice și
+                responsabile pentru a se alătura echipei noastre.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End hero section -->
+      <!-- Start available positions section -->
+      <section id="positions" class="team">
+        <div class="container">
+          <div class="section-title">
+            <h4>Posturi Disponibile</h4>
+          </div>
+          <div class="team-members">
+            <!-- Position 1 -->
+            <div class="team-member">
+              <h3>Patiser</h3>
+              <p>
+                Patiserul este artistul rafinamentului care pune suflet în
+                produsele pe care le frământă ca să ajungă un produs cu un gust
+                desăvârșit.
+              </p>
+            </div>
+            <!-- Position 2 -->
+            <div class="team-member">
+              <h3>Șofer</h3>
+              <p>
+                Șoferul are grijă ca produsele să ajungă la timp pe rafturi ca
+                ele să fie primite în casele orădenilor.
+              </p>
+            </div>
+            <!-- Position 3 -->
+            <div class="team-member">
+              <h3>Muncitor Necalificat</h3>
+              <p>
+                Credem în potențialul fiecărui om și de aceea ne-am luat rolul
+                de educator pentru a duce meșteșugul mai departe.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End available positions section -->
+
+      <!-- Start application form section -->
+      <section id="application" class="application">
+        <div class="container">
+          <div class="section-title">
+            <h4>Aplicare</h4>
+          </div>
+
+          <form id="application-form">
+            <label for="position">Poziția dorită:</label>
+            <select id="position" name="position">
+              <option value="Pozitia1">Patiser</option>
+              <option value="Pozitia2">Șofer</option>
+              <option value="Pozitia3">Muncitor Necalificat</option>
+            </select>
+
+            <label for="name">Nume:</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="phone">Telefon:</label>
+            <input type="tel" id="phone" name="phone" required />
+
+            <label for="message">Mesaj:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <label for="cv">Încarcă CV:</label>
+            <input
+              type="file"
+              id="cv"
+              name="cv"
+              accept=".pdf, .doc, .docx"
+              required
+            />
+
+            <button type="button" onclick="submitForm()">Trimite</button>
+          </form>
+        </div>
+      </section>
+      <!-- End application form section -->
+    </main>
+    <!-- End main section-->
+
+    <!-- Start footer section-->
+    <footer>
+      <div class="container">
+        <div class="footer-left">
+          <p><strong>URMĂREȘTE-NE PE:</strong></p>
+          <ul class="social-items">
+            <li class="social-item">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                class="social-link"
+              >
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+            </li>
+            <li class="social-item">
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                class="social-link"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="copyright">
+          &copy; Delicio 2024. Toate drepturile rezervate
+        </div>
+      </div>
+    </footer>
+
+    <!-- End footer section-->
+    <script
+      src="https://kit.fontawesome.com/3a6ea3d652.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const applicationForm = document.getElementById("application-form");
+
+        function submitForm() {
+          const position = document.getElementById("position").value;
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const phone = document.getElementById("phone").value;
+          const message = document.getElementById("message").value;
+
+          const mailtoLink =
+            "mailto:lucaciuantonia24@gmail.com" +
+            "?subject=" +
+            encodeURIComponent(name + " - Application for " + position) +
+            "&body=" +
+            encodeURIComponent(
+              "Position: " +
+                position +
+                "\nName: " +
+                name +
+                "\nEmail: " +
+                email +
+                "\nPhone: " +
+                phone +
+                "\nMessage: " +
+                message
+            );
+
+          window.location.href = mailtoLink;
+        }
+
+        applicationForm.addEventListener("submit", function (event) {
+          event.preventDefault();
+          submitForm();
+        });
+      });
+    </script>
+  </body>
+</html>

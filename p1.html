@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Produse - Croissant cu unt</title>
+  </head>
+  <body>
+    <!-- Start header section-->
+    <header>
+      <div class="container header">
+        <div class="logo">
+          <a href="#hero"
+            ><img src="./imagini/logo.png" class="logo-img" alt="logo-Delicio"
+          /></a>
+        </div>
+        <button id="navToggleBtn" class="btn-toggle">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav class="navigation">
+          <ul class="nav-items">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Patiserie</a>
+            </li>
+            <li class="nav-item">
+              <a href="produse.html" class="nav-link active">Produse</a>
+            </li>
+            <li class="nav-item">
+              <a href="servicii.html" class="nav-link">Servicii</a>
+            </li>
+            <li class="nav-item">
+              <a href="echipa.html" class="nav-link">Echipă</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- End header section-->
+
+    <!-- Start main section-->
+    <main>
+      <!-- Start product description section -->
+      <section id="product-description">
+        <div class="container">
+          <div class="product-image">
+            <img
+              id="mainImage"
+              src="./imagini/produse/p1.webp"
+              alt="thumbnail1"
+              onclick="changeImage('./imagini/produse/p1.webp')"
+            />
+            <div class="product-thumbnail">
+              <img
+                src="./imagini/produse/p1.webp"
+                alt="thumbnail1"
+                onclick="changeImage('./imagini/produse/p1.webp')"
+              />
+              <img
+                src="./imagini/produse/thumbnail1.webp"
+                alt="thumbnail1"
+                onclick="changeImage('./imagini/produse/thumbnail1.webp')"
+              />
+              <img
+                src="./imagini/produse/thumbnail2.webp"
+                alt="thumbnail2"
+                onclick="changeImage('./imagini/produse/thumbnail2.webp')"
+              />
+            </div>
+          </div>
+          <div class="product-details">
+            <h2>Croissant cu unt</h2>
+            <p>
+              Produs de patiserie franțuzească, recunoscut pentru textura sa
+              fragedă și stratificată.
+            </p>
+            <div class="product-info">
+              <h3>Detalii produs:</h3>
+              <p>
+                <strong>Ingrediente:</strong> făină albă de grâu, uleiuri
+                vegetale (palmier, rapiță), apă, zahăr, drojdie, mix pentru
+                produse de patiserie (făină albă de grâu, făină din malț de
+                grâu, emulsifianți: mono și digliceride ale acizilor grași,
+                esteri ai mono şi digliceridelor cu acidul diacetiltartric,
+                colorant: beta-caroten, agenți de tratare a făinii: acid
+                ascorbic, cisteină, enzime), 2% unt, lapte praf, gluten, sare
+                iodată, arom. Glazură [apă, proteine vegetale (mazăre, cartof,
+                orez), ulei vegetal (floarea soarelui), dextroză, maltodextrină,
+                amidon].
+              </p>
+              <p><strong>Gramaj:</strong> 75g</p>
+            </div>
+            <div class="product-info">
+              <h3>Informații suplimentare</h3>
+              <table>
+                <tr>
+                  <th></th>
+                  <th>Valoare energetică pe 100g / pe bucată</th>
+                </tr>
+                <tr>
+                  <td>Calorii</td>
+                  <td>417 kcal / 313 kcal</td>
+                </tr>
+                <tr>
+                  <td>Valoare energetică</td>
+                  <td>1744 kJ / 1308 kJ</td>
+                </tr>
+                <tr>
+                  <td>Grăsimi</td>
+                  <td>22.2 g / 16.7 g</td>
+                </tr>
+                <tr>
+                  <td>din care acizi grași saturați</td>
+                  <td>15.5 g / 11.6 g</td>
+                </tr>
+                <tr>
+                  <td>Glucide</td>
+                  <td>46.9 g / 35.2 g</td>
+                </tr>
+                <tr>
+                  <td>din care zaharuri</td>
+                  <td>3.8 g / 2.9 g</td>
+                </tr>
+                <tr>
+                  <td>Proteine</td>
+                  <td>7.4 g / 5.6 g</td>
+                </tr>
+                <tr>
+                  <td>Sare</td>
+                  <td>1.1 g / 0.8 g</td>
+                </tr>
+                <tr>
+                  <td>Alergeni</td>
+                  <td>Gluten, Lapte</td>
+                </tr>
+                <tr>
+                  <td>Data limită de consum</td>
+                  <td>2 zile</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End product description section -->
+    </main>
+    <!-- End main section-->
+
+    <!-- Start footer section-->
+    <footer>
+      <div class="container">
+        <div class="footer-left">
+          <p><strong>URMĂREȘTE-NE PE:</strong></p>
+          <ul class="social-items">
+            <li class="social-item">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                class="social-link"
+              >
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+            </li>
+            <li class="social-item">
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                class="social-link"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="copyright">
+          &copy; Delicio 2024. Toate drepturile rezervate
+        </div>
+      </div>
+    </footer>
+
+    <!-- End footer section-->
+    <script
+      src="https://kit.fontawesome.com/3a6ea3d652.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+    <script>
+      function changeImage(newImagePath) {
+        document.getElementById("mainImage").src = newImagePath;
+      }
+    </script>
+  </body>
+</html>
